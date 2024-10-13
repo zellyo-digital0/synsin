@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/CRC25.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/CRC35.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/CRC55.otf") format("opentype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/CRC65.otf") format("opentype");
+  font-weight: 700;
+}
+body {
+  font-family: "Circe", sans-serif;
+}
+
+#aboutTitle,
+#whyChooseTitle,
+#contactTitle {
+  position: relative;
+  text-transform: uppercase;
+}
+#aboutTitle::before,
+#whyChooseTitle::before,
+#contactTitle::before {
+  content: "";
+  background: url(../src/assets/images/title-line.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 90px;
+  height: 8.47px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+}
+#whyChooseTitle::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+#contactTitle::before {
+  background: url(../src/assets/images/title-line2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.home-shadow {
+  box-shadow: 0 2px 20px 0 #0072a112;
+}
+.active {
+  position: relative;
+  color: #003a74;
+}
+.active::after {
+  content: "";
+  background: url(../src/assets/images/title-line.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  z-index: 500;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  background-color: #003a74;
+}
